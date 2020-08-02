@@ -1,0 +1,80 @@
+#single {
+}
+
+#singleTitre {
+  background-color: #bb2443;
+  background-image: url("img/titre.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  font-family: "Roboto";
+  color: black;
+  font-size: 4em;
+  opacity: 0.80;
+  box-shadow: 0px 10px 20px black;
+}
+
+#singleBody {
+  background-color: white;
+  opacity: 0.85;
+  position: relative;
+  z-index: 50;
+}
+
+#categorie {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: -4em;
+}
+
+
+#progressBarA {
+  background-color: black;
+  width: 40%;
+  height: 3px;
+  margin-top: 5em;
+  z-index: 100;
+  position: relative;
+}
+
+#progressBarB {
+  background-color: black;
+  width: 30%;
+  height: 3px;
+  margin-top: 1em;
+  z-index: 100;
+  position: relative;
+}
+
+#progressBarC {
+  background-color: black;
+  width: 20%;
+  height: 3px;
+  margin-top: 1em;
+  z-index: 100;
+  position: relative;
+}
+
+#retourAccueil {
+  font-size: 3em;
+  text-transform: uppercase;s
+}
+
+#white {
+  color: #d21242;
+  position: relative;
+  top: 35px;
+  font-size: 4em;
+  margin-top: -4em;
+  height: 20px;
+}
+
+#blue {
+  border-bottom: solid;
+}
+
+#red {
+  background-color: #d21242;
+}

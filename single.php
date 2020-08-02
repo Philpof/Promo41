@@ -1,21 +1,38 @@
 <?php get_header(); ?>
 
-<div class="container p-5">
-    <div class="d-flex flex-column col-lg-8 col-sm-12" id="">
 
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <!-- <article class="article-full"> -->
-        <header>
-          <img src="" alt="">
-          <?php the_post_thumbnail(); ?>
-          <h2 class="text-center p-5"><?php the_title(); ?></h2>
-          <span>Publié le : <?php the_date();"  " ?>, par : <?php the_author(); ?></span>
-          <p></p>
-          <p>Dans la catégorie <?php the_category(); ?></p>
-          <p>Avec les étiquettes <?php the_tags(); ?></p>
-        </header>
-       <p class=""><?php the_content(); ?></p>
-      <!-- </article> -->
+
+
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+
+  <div id="single" class="">
+    <h1 id="singleTitre" class="container-fluide text-center py-5"><?php the_title(); ?></h1>
+
+    <div class="progress-bar" id="progressBarA" ></div>
+    <div class="progress-bar" id="progressBarB"></div>
+    <div class="progress-bar" id="progressBarC"></div>
+
+
+    <div id="categorie" class="row justify-content-start">
+      <div  class=""><?php the_category(); ?></div>
+
+    </div>
+
+    <div id="singleBody" class="container d-flex flex-column col-lg-8 col-sm-12 justify-content-start">
+
+
+      <p class="text-center p-2"><?php the_post_thumbnail(); ?></p>
+
+      <div class="row justify-content-around">
+        <div>Un magnifique article de <?php the_author(); ?> du <?php the_date();"  " ?></div>
+        <div class=""><?php comments_number(); ?></div>
+      </div>
+
+       <div class="p-5"><?php the_content(); ?></div>
+
+       <p>A voir aussi : <?php the_tags(); ?></p>
+
+
       <?php endwhile; else : ?>
       <article>
         <p>Sorry, no post was found !</p>
@@ -24,7 +41,10 @@
     </div>
 </div>
 
-<a class="nav-item nav-link active text-white bg-dark text-center" href="<?php echo get_option('home'); ?>/">Retour à l'accueil</a>
+<div class="">
 
+
+<a id="retourAccueil" class=" nav-link text-white bg-dark text-center" href="<?php echo get_option('home'); ?>/"><span id="white">&lsaquo;</span><span id="blue">Retour <span id="red">Accueil</span></span><span id="white">&rsaquo;</span></a>
+</div>
 
 <?php get_footer(); ?>

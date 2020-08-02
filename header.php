@@ -13,6 +13,20 @@
 
     <?php wp_head(); ?>
 
+<!-- fonction pour le changement de background de la page "single" (Début) -->
+      <?php
+      $numero = rand(1, 6);
+      ?>
+
+      <style type="text/css">
+        #single {
+         background-image: url("<?php bloginfo('template_directory'); ?>/img/image<?php echo $numero ?>.jpg");
+         background-size: cover;
+         background-position: center;
+        }
+      </style>
+<!-- fonction pour le changement de background de la page "single" (Fin) -->
+
   </head>
 
   <body <?php body_class(); ?>>
